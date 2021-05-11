@@ -1,0 +1,9 @@
+.listNavBar {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+/* .image {
+      width: 40vw;
+      height: 30vh;
+  } */
