@@ -1,86 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Lorem Ipsum</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed natus qui
-      quasi esse repellat! Ipsa numquam ullam quod voluptate, possimus,
-      reprehenderit non a illum sunt amet voluptatem dolorem natus?
-    </p>
-    <div class="divNavBar">
-      <ul class="listNavBar">
-        <li><input id="inpRecherche" placeholder="Recherch" type="text" /></li>
-        <li><a href="">Visage</a></li>
-        <li><a href="">Cheveux</a></li>
-        <li><a href="">Corp</a></li>
-        <li><a href="">Maquillage</a></li>
-      </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <section id="produitsCheveux">
+    <div>
+      <img style="width: 200px" src="./assets/cheveux/cheveux-1.jpeg" />
+      <p>prix = 10$</p>
+      <button data-name="Curl cream" data-price="10" data-totalprice="" data-cat="cheveux" class="add" data-count="" id="produit1">
+        Ajouter au panier
+      </button>
+      <button class="empty" data-name="produit1">vider panier</button>
     </div>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed natus qui
-      quasi esse repellat! Ipsa numquam ullam quod voluptate, possimus,
-      reprehenderit non a illum sunt amet voluptatem dolorem natus?
-    </p>
-    <h2>Soin Visage</h2>
-    <img
-      style="width: 200px"
-      class="image"
-      src="/jQuery_projet/assets/visage/beauty-expert.jpeg"
-      alt=""
-    />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
+  </section>
 
-    <section id="produitsCheveux">
-      <div id="produit1">
-        <img style="width: 200px" src="./assets/cheveux/cheveux-1.jpeg" />
-        <p>prix = 10$</p>
-        <button
-          data-name="Curl cream"
-          data-price="10"
-          data-cat="cheveux"
-          class="ajout"
-          data-count = "0"
-          id="produit1"
-        >
-          Ajouter au panier
-        </button>
-      </div>
-    </section>
+  <section id="produitscorp">
+    <div>
+      <img style="width: 200px" src="./assets/corp/corp-1.jpeg" />
+      <p>prix = 15$</p>
+      <button data-name="Créme hydratante" data-price="15" data-totalprice="" data-cat="corp" data-count=""  class="add" id="produit2">
+        Ajouter au panier
+      </button>
+      <button class="empty" data-name="produit2">vider panier</button>
+      <button class="goCart"><a href="panier.html">panier</a></button>
+    </div>
+  </section>
 
-    <section id="produitscorp">
-      <div id="produit1">
-        <img style="width: 200px" src="./assets/corp/corp-1.jpeg" />
-        <p>prix = 15$</p>
-        <button
-          data-name="Créme hydratante"
-          data-price="15"
-          data-cat="corp"
-          data-count = "0"
-          class="ajout"
-          id="produit2"
-        >
-          Ajouter au panier
-        </button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
 
-        <button class="goPanier"><a href="panier.html">panier</a></button>
-      </div>
-    </section>
-
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="main.js"></script>
-  </body>
 </html>
