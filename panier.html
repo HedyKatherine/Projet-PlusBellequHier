@@ -1,23 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="reset." />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-</head>
 
-<body>
+    <title>+ Belle qu'Hier - Panier</title>
+  </head>
+  <body>
+    <!-- ------------------------------------------------------HEADER--------------------------------------- -->
+
+    <header>
+      <h1 class="text-center">+ Belle qu'Hier</h1>
+      <nav
+        id="navbar_top"
+        class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+      >
+        <div
+          class="collapse navbar-collapse justify-content-around"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li><a class="nav-link" href="#">Visage </a></li>
+            <li><a class="nav-link" href="#">Corps</a></li>
+            <li><a class="nav-link" href="#">Cheveux </a></li>
+            <li><a class="nav-link" href="#">Maquillage</a></li>
+          </ul>
+          <!-- BAR DE RECHERCHE -->
+          <form class="form-inline float-right">
+            <input
+              id="rechrchProduit"
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Rechercher "
+              aria-label="Search"
+            />
+            <button
+              id="recherch"
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="button"
+            >
+              Rechercher
+            </button>
+            <img
+              src="assets/icons/shopping-cart-simple.png"
+              width="50"
+              alt="shopping cart"
+            />
+          </form>
+          <!-- BAR DE RECHERCHE -->
+        </div>
+      </nav>
+    </header>
+
+    <!-- ------------------------------------------------------TEST JQUERY--------------------------------------- -->
+
     <section id="shoppingCart">
-        <p id="cart"></p>
-        <button><a href="index.html">retour</a></button>
+      <p id="cart"></p>
+      <button><a href="index.html">retour</a></button>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-</body>
+    <div class="shopping-cart">
+        <!-- Title -->
+        <div class="title">
+          Shopping Bag
+        </div>
+        <div class="imageProduct"></div>
+        <div class="productName">Lorem</div>
 
+        <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              <img src="plus.svg" alt="" />
+            </button>
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+              <img src="minus.svg" alt="" />
+            </button>
+          </div>
+
+    <!-- ------------------------------------------------------SECTION FOOTER--------------------------------------- -->
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col text-center my-2">
+            <a href="#"
+              ><img
+                src="assets/icons/iconfinder_square-facebook_317727.png"
+                alt="Icône Facebook"
+                class="mx-5"
+            /></a>
+            <a href="#"
+              ><img
+                src="assets/icons/iconfinder_Instagram_1298747.png"
+                alt="Icône Instagram"
+                class="mx-5"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center my-2">
+            <ul class="pl-0">
+              <li class="d-block d-md-inline mx-5"><a href="#">F.A.Q</a></li>
+              <li class="d-block d-md-inline mx-5">
+                <a href="#">Service Client</a>
+              </li>
+              <li class="d-block d-md-inline mx-5">
+                <a href="#">CGV/CGU - Crédit</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
 </html>
