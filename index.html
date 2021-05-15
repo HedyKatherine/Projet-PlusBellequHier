@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
-  <link rel="stylesheet" href="reset." />
+  <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
 
   <title>+ Belle qu'Hier</title>
@@ -21,10 +21,10 @@
     <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
       <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Visage </a></li>
-          <li><a class="nav-link" href="#">Corps</a></li>
-          <li><a class="nav-link" href="#">Cheveux </a></li>
-          <li><a class="nav-link" href="#">Maquillage</a></li>
+          <li><a class="nav-link" href="#visage">Visage </a></li>
+          <li><a class="nav-link" href="#corps">Corps</a></li>
+          <li><a class="nav-link" href="#cheveux">Cheveux </a></li>
+          <li><a class="nav-link" href="#maquillage">Maquillage</a></li>
         </ul>
         <!-- BAR DE RECHERCHE -->
         <form class="form-inline float-right">
@@ -50,7 +50,7 @@
         <p class="font-italic">Un sérum à la texture gel combinant le babchi, une plante
           ayurvédique, ainsi que le champignon trémelle pour estomper rides et
           ridules, lisser les traits et unifier.</p>
-        <button id="decouvrir"><a href="#">
+        <button type="button" id="decouvrir"><a href="#">
             Découvrir</a></button>
       </div>
       <img class="col-12 col-md-4 col-lg-4 p-0" src="assets/visage/visage-1.jpeg" alt="produit best seller" />
@@ -76,16 +76,16 @@
       </div>
 
       <div class="container" title="soins visage">
-        <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-column flex-md-row justify-content-center">
           <div class="col d-flex justify-content-center" title="bakuchiol">
             <img class="w-75" src="assets/visage/visage-1.jpeg" />
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>30‎€</p>
               <button data-name="bakuchiol" data-price="30" data-totalprice="" data-cat="visage" data-count=""
-                class="add" id="produit7">
+                class="add" id="produit1">
                 ajouter
               </button>
-              <button class="empty" data-name="produit7">retirer</button>
+              <button class="empty" data-name="produit1">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="huile démaquillante">
@@ -93,10 +93,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>25‎€</p>
               <button data-name="huile démaquillante" data-price="25" data-totalprice="" data-cat="visage" data-count=""
-                class="add" id="produit8">
+                class="add" id="produit2">
                 ajouter
               </button>
-              <button class="empty" data-name="produit8">retirer</button>
+              <button class="empty" data-name="produit2">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="lait hydratant">
@@ -105,25 +105,25 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>20‎€</p>
               <button data-name="lait hydratant" data-price="20" data-totalprice="" data-cat="visage" data-count=""
-                class="add" id="produit9">
+                class="add" id="produit3">
                 ajouter
               </button>
-              <button class="empty" data-name="produit9">retirer</button>
+              <button class="empty" data-name="produit3">retirer</button>
             </div>
           </div>
         </div>
 
-        <div class="row justify-content-center align-items-center mx-0 ">
+        <div class="row flex-column flex-md-row justify-content-center align-items-center mx-0 ">
           <div class="col d-flex justify-content-center" title="gel nettoyant">
             <img class="w-75" src="assets/visage/visage-4.jpeg" />
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>25‎€</p>
               <div class="d-flex flex-column justify-content-center">
                 <button data-name="gel nettoyant" data-price="25" data-totalprice="" data-cat="visage" data-count=""
-                  class="add" id="produit10">
+                  class="add" id="produit4">
                   ajouter
                 </button>
-                <button class="empty" data-name="produit10">retirer</button>
+                <button class="empty" data-name="produit4">retirer</button>
               </div>
             </div>
           </div>
@@ -132,10 +132,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>28‎€</p>
               <button data-name="rosehip bioregenerate" data-price="28" data-totalprice="" data-cat="visage"
-                data-count="" class="add" id="produit11">
+                data-count="" class="add" id="produit5">
                 ajouter
               </button>
-              <button class="empty" data-name="produit11">retirer</button>
+              <button class="empty" data-name="produit5">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="creme">
@@ -143,10 +143,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>12‎€</p>
               <button data-name="creme" data-price="12" data-totalprice="" data-cat="visage" data-count="" class="add"
-                id="produit12">
+                id="produit6">
                 ajouter
               </button>
-              <button class="empty" data-name="produit12">retirer</button>
+              <button class="empty" data-name="produit6">retirer</button>
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@
         </div>
       </div>
       <div class="container" title="produits de corps">
-        <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-column flex-md-row justify-content-center">
           <div class="col d-flex justify-content-center" title="Créme hydratante">
             <img class="w-75" src="assets/corps/corp-1.jpeg" />
             <div class="d-flex flex-column justify-content-center align-items-center">
@@ -208,7 +208,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center align-items-center mx-0 ">
+        <div class="row flex-column flex-md-row justify-content-center align-items-center mx-0 ">
           <div class="col d-flex justify-content-center" title="lait hydratante">
             <img class="w-75" src="assets/corps/corp-4.jpeg" />
             <div class="d-flex flex-column justify-content-center align-items-center">
@@ -267,16 +267,16 @@
         </div>
       </div>
       <div class="container" title="produits de cheveux">
-        <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-column flex-md-row justify-content-center">
           <div class="col d-flex justify-content-center" title="curl cream">
             <img class="w-75" src="assets/cheveux/cheveux-1.jpeg" />
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>10‎€</p>
               <button data-name="curl cream" data-price="10" data-totalprice="" data-cat="cheveux" data-count=""
-                class="add" id="produit7">
+                class="add" id="produit13">
                 ajouter
               </button>
-              <button class="empty" data-name="produit7">retirer</button>
+              <button class="empty" data-name="produit13">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="shampoing doux">
@@ -284,10 +284,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>18‎€</p>
               <button data-name="shampoing doux" data-price="18" data-totalprice="" data-cat="cheveux" data-count=""
-                class="add" id="produit8">
+                class="add" id="produit14">
                 ajouter
               </button>
-              <button class="empty" data-name="produit8">retirer</button>
+              <button class="empty" data-name="produit14">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="vegan volume powder">
@@ -296,25 +296,25 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>12‎€</p>
               <button data-name="vegan volume powder" data-price="12" data-totalprice="" data-cat="cheveux"
-                data-count="" class="add" id="produit9">
+                data-count="" class="add" id="produit15">
                 ajouter
               </button>
-              <button class="empty" data-name="produit9">retirer</button>
+              <button class="empty" data-name="produit15">retirer</button>
             </div>
           </div>
         </div>
 
-        <div class="row justify-content-center align-items-center mx-0 ">
+        <div class="row flex-column flex-md-row justify-content-center align-items-center mx-0 ">
           <div class="col d-flex justify-content-center" title="vegan serum">
             <img class="w-75" src="assets/cheveux/cheveux-4.jpeg" />
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>22‎€</p>
               <div class="d-flex flex-column justify-content-center">
                 <button data-name="vegan serum" data-price="22" data-totalprice="" data-cat="cheveux" data-count=""
-                  class="add" id="produit10">
+                  class="add" id="produit16">
                   ajouter
                 </button>
-                <button class="empty" data-name="produit10">retirer</button>
+                <button class="empty" data-name="produit16">retirer</button>
               </div>
             </div>
           </div>
@@ -323,10 +323,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>4€</p>
               <button data-name="rahua voluminous shampoo" data-price="4" data-totalprice="" data-cat="cheveux"
-                data-count="" class="add" id="produit11">
+                data-count="" class="add" id="produit17">
                 ajouter
               </button>
-              <button class="empty" data-name="produit11">retirer</button>
+              <button class="empty" data-name="produit17">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="shampoo">
@@ -334,10 +334,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>7‎€</p>
               <button data-name="coco rose" data-price="7" data-totalprice="" data-cat="cheveux" data-count=""
-                class="add" id="produit12">
+                class="add" id="produit18">
                 ajouter
               </button>
-              <button class="empty" data-name="produit12">retirer</button>
+              <button class="empty" data-name="produit18">retirer</button>
             </div>
           </div>
         </div>
@@ -361,16 +361,16 @@
         </div>
       </div>
       <div class="container" title="produits de maquillage">
-        <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-column flex-md-row justify-content-center">
           <div class="col d-flex justify-content-center" title="rouge à levre">
             <img class="w-75" src="assets/maquillage/maquillage-1.jpeg" />
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>15‎€</p>
               <button data-name="rouge à levre" data-price="15" data-totalprice="" data-cat="maquillage" data-count=""
-                class="add" id="produit7">
+                class="add" id="produit19">
                 ajouter
               </button>
-              <button class="empty" data-name="produit7">retirer</button>
+              <button class="empty" data-name="produit19">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="deodorant créme">
@@ -378,10 +378,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>25‎€</p>
               <button data-name="deodorant créme" data-price="25" data-totalprice="" data-cat="maquillage" data-count=""
-                class="add" id="produit8">
+                class="add" id="produit20">
                 ajouter
               </button>
-              <button class="empty" data-name="produit8">retirer</button>
+              <button class="empty" data-name="produit20">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="high lighter">
@@ -390,25 +390,25 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>17‎€</p>
               <button data-name="high lighter" data-price="17" data-totalprice="" data-cat="maquillage" data-count=""
-                class="add" id="produit9">
+                class="add" id="produit21">
                 ajouter
               </button>
-              <button class="empty" data-name="produit9">retirer</button>
+              <button class="empty" data-name="produit21">retirer</button>
             </div>
           </div>
         </div>
 
-        <div class="row justify-content-center align-items-center mx-0 ">
+        <div class="row flex-column flex-md-row justify-content-center align-items-center mx-0 ">
           <div class="col d-flex justify-content-center" title="gloss">
             <img class="w-75" src="assets/maquillage/maquillage-4.jpeg" />
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>15‎€</p>
               <div class="d-flex flex-column justify-content-center">
                 <button data-name="gloss" data-price="15" data-totalprice="" data-cat="maquillage" data-count=""
-                  class="add" id="produit10">
+                  class="add" id="produit22">
                   ajouter
                 </button>
-                <button class="empty" data-name="produit10">retirer</button>
+                <button class="empty" data-name="produit22">retirer</button>
               </div>
             </div>
           </div>
@@ -417,10 +417,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>4€</p>
               <button data-name="vernis" data-price="27" data-totalprice="" data-cat="maquillage" data-count=""
-                class="add" id="produit11">
+                class="add" id="produit23">
                 ajouter
               </button>
-              <button class="empty" data-name="produit11">retirer</button>
+              <button class="empty" data-name="produit23">retirer</button>
             </div>
           </div>
           <div class="col d-flex justify-content-center" title="shampoo">
@@ -428,10 +428,10 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
               <p>7‎€</p>
               <button data-name="coco rose" data-price="7" data-totalprice="" data-cat="maquillage" data-count=""
-                class="add" id="produit12">
+                class="add" id="produit24">
                 ajouter
               </button>
-              <button class="empty" data-name="produit12">retirer</button>
+              <button class="empty" data-name="produit24">retirer</button>
             </div>
           </div>
         </div>
