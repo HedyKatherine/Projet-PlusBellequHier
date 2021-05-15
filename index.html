@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <link rel="stylesheet" href="reset." />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>+ Belle qu'Hier</title>
+</head>
+
+<body>
+  <!-- ------------------------------------------------------HEADER--------------------------------------- -->
+
+  <header>
+    <h1 class="text-center">+ Belle qu'Hier</h1>
+    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+      <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li><a class="nav-link" href="#">Visage </a></li>
+          <li><a class="nav-link" href="#">Corps</a></li>
+          <li><a class="nav-link" href="#">Cheveux </a></li>
+          <li><a class="nav-link" href="#">Maquillage</a></li>
+        </ul>
+        <!-- BAR DE RECHERCHE -->
+        <form class="form-inline float-right">
+          <input id="rechrchProduit" class="form-control mr-sm-2" type="search" placeholder="Rechercher "
+            aria-label="Search" />
+          <button id="recherch" class="btn btn-outline-success my-2 my-sm-0" type="button">
+            Rechercher
+          </button>
+          <img src="assets/icons/shopping-cart-simple.png" width="50" alt="shopping cart" />
+
+        </form>
+        <!-- BAR DE RECHERCHE -->
+      </div>
+    </nav>
+  </header>
+  <!-- ------------------------------------------------------BEST SELLER--------------------------------------- -->
+  <section class="bestseller">
+    <div class="container d-flex flex-end flex-md-row my-2 justify-content-center align-items-md-stretch">
+
+      <div class="col-12 col-md-8 col-lg-9 d-flex flex-column justify-content-center text-center p-5">
+        <h2>Serum Bakuchiol Alternatif au Rétinol</h2>
+        <p>Notre Best Seller</p>
+        <p class="font-italic">Un sérum à la texture gel combinant le babchi, une plante
+          ayurvédique, ainsi que le champignon trémelle pour estomper rides et
+          ridules, lisser les traits et unifier.</p>
+        <button id="decouvrir"><a href="#">
+            Découvrir</a></button>
+      </div>
+      <img class="col-12 col-md-4 col-lg-4 p-0" src="assets/visage/visage-1.jpeg" alt="produit best seller" />
+
+    </div>
+  </section>
+  <!-- ------------------------------------------------------SECTION VISAGE--------------------------------------- -->
+  <div class="choixproduits">
+    <section id="visage">
+      <div class="container d-flex flex-column flex-md-row my-5 justify-content-center align-items-md-stretch">
+        <img class="col-12 col-md-4 col-lg-3 p-0" src="assets/visage/beauty-expert.jpeg" alt="visage beauty expert" />
+        <div style="background-color: #e9e5e5;"
+          class="col-12 col-md-8 col-lg-9 d-flex flex-column justify-content-center p-5">
+          <h2 class="">Visage</h2>
+          <p>
+            Une routine de soin visage clean avec des produits qui font la part
+            belle aux actifs est la clé pour une peau belle et saine. Découvrez
+            nos 3 gestes essentiels (double nettoyage, exfoliation douce, huile
+            de soin) ainsi que tous nos soins complémentaires pour parfaire
+            votre routine beauté !
+          </p>
+        </div>
+      </div>
+
+      <div class="container" title="soins visage">
+        <div class="d-flex flex-row justify-content-center">
+          <div class="col d-flex justify-content-center" title="bakuchiol">
+            <img class="w-75" src="assets/visage/visage-1.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>30‎€</p>
+              <button data-name="bakuchiol" data-price="30" data-totalprice="" data-cat="visage" data-count=""
+                class="add" id="produit7">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit7">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="huile démaquillante">
+            <img class="w-75" src="assets/visage/visage-2.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>25‎€</p>
+              <button data-name="huile démaquillante" data-price="25" data-totalprice="" data-cat="visage" data-count=""
+                class="add" id="produit8">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit8">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="lait hydratant">
+            <img class="w-75" src="assets/visage/visage-3.jpeg" />
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>20‎€</p>
+              <button data-name="lait hydratant" data-price="20" data-totalprice="" data-cat="visage" data-count=""
+                class="add" id="produit9">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit9">retirer</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center mx-0 ">
+          <div class="col d-flex justify-content-center" title="gel nettoyant">
+            <img class="w-75" src="assets/visage/visage-4.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>25‎€</p>
+              <div class="d-flex flex-column justify-content-center">
+                <button data-name="gel nettoyant" data-price="25" data-totalprice="" data-cat="visage" data-count=""
+                  class="add" id="produit10">
+                  ajouter
+                </button>
+                <button class="empty" data-name="produit10">retirer</button>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="rosehip bioregenerate">
+            <img class="w-75" src="assets/visage/visage-5.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>28‎€</p>
+              <button data-name="rosehip bioregenerate" data-price="28" data-totalprice="" data-cat="visage"
+                data-count="" class="add" id="produit11">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit11">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="creme">
+            <img class="w-75" src="assets/visage/visage-6.jpg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>12‎€</p>
+              <button data-name="creme" data-price="12" data-totalprice="" data-cat="visage" data-count="" class="add"
+                id="produit12">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit12">retirer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ------------------------------------------------------SECTION CORPS--------------------------------------- -->
+    <section id="corps">
+      <div class="container d-flex flex-column flex-md-row my-5 justify-content-center align-items-md-stretch">
+        <img class="col-12 col-md-4 col-lg-3 p-0" src="assets/corps/beauty-inspirational.jpeg"
+          alt="corp beauty expert" />
+        <div style="background-color: #e9e5e5"
+          class="col-12 col-md-8 col-lg-9 d-flex flex-column justify-content-center p-5">
+          <h2 class="">Corps</h2>
+          <p>
+            Peau douce, lisse et ferme, c’est la quête de toute routine corps !
+            Que ce soit pour lutter contre la cellulite ou le manque de fermeté,
+            découvrez notre sélection de soins pointus pour le corps ; mais
+            aussi nos gels douches pour nettoyer tout en douceur.
+          </p>
+        </div>
+      </div>
+      <div class="container" title="produits de corps">
+        <div class="d-flex flex-row justify-content-center">
+          <div class="col d-flex justify-content-center" title="Créme hydratante">
+            <img class="w-75" src="assets/corps/corp-1.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>15‎€</p>
+              <button data-name="Créme hydratante" data-price="15" data-totalprice="" data-cat="corp" data-count=""
+                class="add" id="produit7">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit7">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="gommage nourrissant">
+            <img class="w-75" src="assets/corps/corp-2.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>25‎€</p>
+              <button data-name="gommage nourrissant" data-price="25" data-totalprice="" data-cat="corp" data-count=""
+                class="add" id="produit8">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit8">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="deodorant créme">
+            <img class="w-75" src="assets/corps/corp-3.jpeg" />
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>17‎€</p>
+              <button data-name="deodorant créme" data-price="17" data-totalprice="" data-cat="corp" data-count=""
+                class="add" id="produit9">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit9">retirer</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center mx-0 ">
+          <div class="col d-flex justify-content-center" title="lait hydratante">
+            <img class="w-75" src="assets/corps/corp-4.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>15‎€</p>
+              <div class="d-flex flex-column justify-content-center">
+                <button data-name="lait hydratante" data-price="15" data-totalprice="" data-cat="corp" data-count=""
+                  class="add" id="produit10">
+                  ajouter
+                </button>
+                <button class="empty" data-name="produit10">retirer</button>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="coco rose">
+            <img class="w-75" src="assets/corps/corp-5.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>7‎€</p>
+              <button data-name="coco rose" data-price="7" data-totalprice="" data-cat="corp" data-count="" class="add"
+                id="produit11">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit11">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="coco rose">
+            <img class="w-75" src="assets/corps/corp-6.jpg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>7‎€</p>
+              <button data-name="coco rose" data-price="7" data-totalprice="" data-cat="corp" data-count="" class="add"
+                id="produit12">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit12">retirer</button>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+
+    <!-- ------------------------------------------------------SECTION CHEVEUX--------------------------------------- -->
+    </section>
+    <section id="cheveux">
+      <div class="container d-flex flex-column flex-md-row my-5 justify-content-center align-items-md-stretch">
+        <img class="col-12 col-md-4 col-lg-3 p-0" src="assets/cheveux/beauty-inspirational.jpeg"
+          alt="corp beauty expert" />
+        <div style="background-color: #e9e5e5"
+          class="col-12 col-md-8 col-lg-9 d-flex flex-column justify-content-center p-5">
+          <h2 class="">cheveux</h2>
+          <p>
+            Peau douce, lisse et ferme, c’est la quête de toute routine cheveux !
+            Que ce soit pour lutter contre la cellulite ou le manque de fermeté,
+            découvrez notre sélection de soins pointus pour le cheveux ; mais
+            aussi nos gels douches pour nettoyer tout en douceur.
+          </p>
+        </div>
+      </div>
+      <div class="container" title="produits de cheveux">
+        <div class="d-flex flex-row justify-content-center">
+          <div class="col d-flex justify-content-center" title="curl cream">
+            <img class="w-75" src="assets/cheveux/cheveux-1.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>10‎€</p>
+              <button data-name="curl cream" data-price="10" data-totalprice="" data-cat="cheveux" data-count=""
+                class="add" id="produit7">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit7">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="shampoing doux">
+            <img class="w-75" src="assets/cheveux/cheveux-2.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>18‎€</p>
+              <button data-name="shampoing doux" data-price="18" data-totalprice="" data-cat="cheveux" data-count=""
+                class="add" id="produit8">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit8">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="vegan volume powder">
+            <img class="w-75" src="assets/cheveux/cheveux-3.jpeg" />
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>12‎€</p>
+              <button data-name="vegan volume powder" data-price="12" data-totalprice="" data-cat="cheveux"
+                data-count="" class="add" id="produit9">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit9">retirer</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center mx-0 ">
+          <div class="col d-flex justify-content-center" title="vegan serum">
+            <img class="w-75" src="assets/cheveux/cheveux-4.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>22‎€</p>
+              <div class="d-flex flex-column justify-content-center">
+                <button data-name="vegan serum" data-price="22" data-totalprice="" data-cat="cheveux" data-count=""
+                  class="add" id="produit10">
+                  ajouter
+                </button>
+                <button class="empty" data-name="produit10">retirer</button>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="rahua voluminous shampoo">
+            <img class="w-75" src="assets/cheveux/cheveux-5.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>4€</p>
+              <button data-name="rahua voluminous shampoo" data-price="4" data-totalprice="" data-cat="cheveux"
+                data-count="" class="add" id="produit11">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit11">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="shampoo">
+            <img class="w-75" src="assets/cheveux/cheveux-6.jpg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>7‎€</p>
+              <button data-name="coco rose" data-price="7" data-totalprice="" data-cat="cheveux" data-count=""
+                class="add" id="produit12">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit12">retirer</button>
+            </div>
+          </div>
+        </div>
+
+    </section>
+    <!-- ------------------------------------------------------SECTION MAQUILAGE--------------------------------------- -->
+    </section>
+    <section id="maquillage">
+      <div class="container d-flex flex-column flex-md-row my-5 justify-content-center align-items-md-stretch">
+        <img class="col-12 col-md-4 col-lg-3 p-0" src="assets/maquillage/beauty-inspirational.jpeg"
+          alt="corp beauty expert" />
+        <div style="background-color: #e9e5e5"
+          class="col-12 col-md-8 col-lg-9 d-flex flex-column justify-content-center p-5">
+          <h2 class="">maquillage</h2>
+          <p>
+            Le maquillage est l’étape ultime pour sublimer son visage ! Comme
+            pour les soins visage, nous avons sélectionné des produits coup de
+            cœur, efficaces et toujours clean pour une peau saine. Découvrez
+            notre sélection de maquillage-soin triée sur le volet.
+          </p>
+        </div>
+      </div>
+      <div class="container" title="produits de maquillage">
+        <div class="d-flex flex-row justify-content-center">
+          <div class="col d-flex justify-content-center" title="rouge à levre">
+            <img class="w-75" src="assets/maquillage/maquillage-1.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>15‎€</p>
+              <button data-name="rouge à levre" data-price="15" data-totalprice="" data-cat="maquillage" data-count=""
+                class="add" id="produit7">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit7">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="deodorant créme">
+            <img class="w-75" src="assets/maquillage/maquillage-2.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>25‎€</p>
+              <button data-name="deodorant créme" data-price="25" data-totalprice="" data-cat="maquillage" data-count=""
+                class="add" id="produit8">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit8">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="high lighter">
+            <img class="w-75" src="assets/maquillage/maquillage-3.jpeg" />
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>17‎€</p>
+              <button data-name="high lighter" data-price="17" data-totalprice="" data-cat="maquillage" data-count=""
+                class="add" id="produit9">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit9">retirer</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center mx-0 ">
+          <div class="col d-flex justify-content-center" title="gloss">
+            <img class="w-75" src="assets/maquillage/maquillage-4.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>15‎€</p>
+              <div class="d-flex flex-column justify-content-center">
+                <button data-name="gloss" data-price="15" data-totalprice="" data-cat="maquillage" data-count=""
+                  class="add" id="produit10">
+                  ajouter
+                </button>
+                <button class="empty" data-name="produit10">retirer</button>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="vernis">
+            <img class="w-75" src="assets/maquillage/maquillage-5.jpeg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>4€</p>
+              <button data-name="vernis" data-price="27" data-totalprice="" data-cat="maquillage" data-count=""
+                class="add" id="produit11">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit11">retirer</button>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center" title="shampoo">
+            <img class="w-75" src="assets/maquillage/maquillage-6.jpg" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <p>7‎€</p>
+              <button data-name="coco rose" data-price="7" data-totalprice="" data-cat="maquillage" data-count=""
+                class="add" id="produit12">
+                ajouter
+              </button>
+              <button class="empty" data-name="produit12">retirer</button>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+
+
+  <!-- ------------------------------------------------------SECTION CADEAU--------------------------------------- -->
+
+  <div id="cadeau" class="container-fluid my-3">
+    <div class="row my-2">
+      <div class="col text-center pt-3">
+        <p>Livraison offerte dès 30€ d'achat</p>
+        <p>5 échantillons offerts par commande</p>
+        <p>Un service client à votre disposition</p>
+      </div>
+    </div>
+  </div>
+  <div id="newsletter" class="container-fluid my-3">
+    <div class="row ">
+      <div class="col text-center py-2">
+        <p>Incrivez-vous à notre newsletter !</p>
+        <input type="email" name="" id="emailNewsletter" />
+        <input type="button" value="S'incrire" class="bg-muted" />
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------------------------------------SECTION FOOTER--------------------------------------- -->
+
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-center my-2">
+          <a href="#"><img src="assets/icons/iconfinder_square-facebook_317727.png" alt="Icône Facebook"
+              class="mx-5" /></a>
+          <a href="#"><img src="assets/icons/iconfinder_Instagram_1298747.png" alt="Icône Instagram" class="mx-5" /></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center my-2">
+          <ul class="pl-0">
+            <li class="d-block d-md-inline mx-5"><a href="#">F.A.Q</a></li>
+            <li class="d-block d-md-inline mx-5"><a href="#">Service Client</a></li>
+            <li class="d-block d-md-inline mx-5"><a href="#">CGV/CGU - Crédit</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ------------------------------------------------------TEST JQUERY--------------------------------------- -->
+
+  <!-- <section id="produitsCheveux">
+      <div>
+        <img style="width: 200px" src="./assets/cheveux/cheveux-1.jpeg" />
+        <p>10‎€</p>
+        <button
+          data-name="Curl cream"
+          data-price="10"
+          data-totalprice=""
+          data-cat="cheveux"
+          class="add"
+          data-count=""
+          id="produit1"
+        >
+          ajouter
+        </button>
+        <button class="empty" data-name="produit1">retirer</button>
+      </div>
+    </section>
+
+    <section id="produitscorp">
+      <div>
+        <img style="width: 200px" src="./assets/corps/corp-1.jpeg" />
+        <p>15‎€</p>
+        <button
+          data-name="Créme hydratante"
+          data-price="15"
+          data-totalprice=""
+          data-cat="corp"
+          data-count=""
+          class="add"
+          id="produit2"
+        >
+          ajouter
+        </button>
+        <button class="empty" data-name="produit2">retirer</button>
+        <button class="goCart"><a href="panier.html">panier</a></button>
+      </div>
+    </section> -->
+
+
+  <!-- ------------------------------------------------------LUIZAAAA CODE--------------------------------------- -->
+
+
+  <div id="resultRech"></div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
