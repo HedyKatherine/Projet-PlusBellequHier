@@ -1,0 +1,65 @@
+/* Logo font : BioRhyme*/
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme&display=swap");
+/* Subtitles font : Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* text font : Slabo 13px */
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme&family=Slabo+13px&display=swap");
+
+body {
+  font-family: "Slabo 13px";
+}
+h1 {
+  font-family: "BioRhyme";
+  font-size: 50px;
+  color: #f6a067;
+}
+h2 {
+  font-family: "Montserrat";
+}
+
+#cadeau {
+  background-color: lightgrey;
+}
+footer img {
+  width: 2rem;
+}
+
+#decouvrir{
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#000000;
+  text-align:center;
+  transition: all 0.2s;
+  border-radius: 10px;
+  text-decoration: none;
+}
+#decouvrir:hover{
+  color:#000000;
+  background-color:#e9e5e5;
+  text-decoration: none;
+  }
+
+.choixproduits button{
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#000000;
+  text-align:center;
+  transition: all 0.2s;
+  border-radius: 10px;
+  }
+  .choixproduits button:hover{
+  color:#000000;
+  background-color:#e9e5e5;
+  }
