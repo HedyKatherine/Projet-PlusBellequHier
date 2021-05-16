@@ -22,24 +22,26 @@
   <header>
     <h1 class="text-center">+ Belle qu'Hier</h1>
     <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li><a class="nav-link" href="#visage">Visage </a></li>
-          <li><a class="nav-link" href="#corps">Corps</a></li>
-          <li><a class="nav-link" href="#cheveux">Cheveux </a></li>
-          <li><a class="nav-link" href="#maquillage">Maquillage</a></li>
+          <li class="nav-item"><a class="nav-link" href="#visage">Visage </a></li>
+          <li class="nav-item"><a class="nav-link" href="#corps">Corps</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cheveux">Cheveux </a></li>
+          <li class="nav-item"><a class="nav-link" href="#maquillage">Maquillage</a></li>
         </ul>
-        <!-- BAR DE RECHERCHE -->
-        <form class="form-inline float-right">
-          <input id="rechrchProduit" class="form-control mr-sm-2" type="search" placeholder="Rechercher "
-            aria-label="Search" />
-          <button id="recherch" class="btn btn-outline-success my-2 my-sm-0" type="button">
-            Rechercher
-          </button>
-          <a href="panier.html"><img src="assets/icons/shopping-cart-simple.png" width="50" alt="shopping cart" /></a>
-
-        </form>
-        <!-- BAR DE RECHERCHE -->
+        <div class="d-flex flex-column flex-lg-row">
+          <!-- BAR DE RECHERCHE -->
+          <form class="form-inline mr-lg-5">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <!-- BAR DE RECHERCHE -->
+          <a href="panier.html" class="d-block d-lg-none mt-2">Panier</a>
+          <a href="panier.html" class="d-none d-lg-block"><img src="assets/icons/shopping-cart-simple.png" width="50" alt="shopping cart" /></a>
+        </div>
       </div>
     </nav>
   </header>

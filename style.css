@@ -72,3 +72,8 @@ a:hover{
   color:#000000;
   background-color:#e9e5e5;
   }
+
+  /* Pour que le lien "panier" ait la même couleur que les liens de la ul de la nav.*/
+  nav form + a {
+    color: rgba(0, 0, 0, 0.5);
+  }
