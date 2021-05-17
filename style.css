@@ -4,7 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 /* text font : Slabo 13px */
 @import url("https://fonts.googleapis.com/css2?family=BioRhyme&family=Slabo+13px&display=swap");
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Slabo 13px";
 }
@@ -24,25 +26,55 @@ footer img {
   width: 2rem;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
 
-
-.choixproduits button{
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
+#decouvrir {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
   box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
-  color:#000000;
-  text-align:center;
+  text-decoration: none;
+  color: black;
+  text-align: center;
   transition: all 0.2s;
   border-radius: 10px;
-  }
-  .choixproduits button:hover{
-  color:#000000;
-  background-color:#e9e5e5;
-  }
- 
+}
+#decouvrir:hover {
+  color: #000000;
+  background-color: #e9e5e5;
+  text-decoration: none;
+}
+
+.choixproduits button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  transition: all 0.2s;
+  border-radius: 10px;
+}
+.choixproduits button:hover {
+  color: #000000;
+  background-color: #e9e5e5;
+}
+
+/* Pour que le lien "panier" ait la même couleur que les liens de la ul de la nav.*/
+nav form + a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#cadeau {
+  height: 100px;
+}

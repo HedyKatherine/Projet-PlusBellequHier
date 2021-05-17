@@ -20,11 +20,12 @@ button.click(function () {
   else {
     $(this).data("totalprice", prevPrice + $(this).data("price"));
   }
+
   //on store dans le local storage toutes les donnees recolter (nom du produit ajouter, category, prix, total  du prix du produit, nombre de produit chaque donner est accessible par la clé associer (exemple `${$(this).attr("id")}TotalPrice`) est la cle pour avoir le prix total)
   localStorage.setItem(`${$(this).attr("id")}Name`, $(this).data("name"));
   localStorage.setItem(`${$(this).attr("id")}Price`, $(this).data("price"));
   //localStorage.setItem(`${$(this).attr("id")}Cat`, $(this).data("cat"));
-  localStorage.setItem(`${$(this).attr("id")}Number`, $(this).data("count")); // (key, valeur) (produit1Number, 1)
+  localStorage.setItem(`${$(this).attr("id")}Number`, $(this).data("count"));
   localStorage.setItem(
     `${$(this).attr("id")}TotalPrice`,
     $(this).data("totalprice")
@@ -46,15 +47,13 @@ $(".empty").click(function () {
 
 // let produit1Name = localStorage.getItem("produit1Name");
 // let produit2Name = localStorage.getItem("produit2Name");
-// let produit1Number  = localStorage.getItem("produit1Number");
+// let produit1Number = localStorage.getItem("produit1Number");
 // let produit2Number = localStorage.getItem("produit2Number");
 // localStorage.getItem("test",)
 // let prix = localStorage.getItem("totalPrice");
-let itemsNames = [];
 
 function viewShopping() {
-  //avec la boucle on obtient les 21 cles possible et donc les produits associer a ces cle
-  for (i = 1; i < 21; i++) {
+  for (i = 0; i < 21; i++) {
     itemName = `${"produit" + i + "Name"}`;
     itemTotalPrice = `${"produit" + i + "TotalPrice"}`;
     itemPrice = `${"produit" + i + "Price"}`;
@@ -68,29 +67,52 @@ function viewShopping() {
     if (itemNameValue !== null) {
       itemsNames.push(itemNameValue);
     }
-    console.log(itemNameValue);
+    //console.log(itemNameValue);
   }
   for (i = 0; i < itemsNames.length; i++) {
     $("#cart").append(itemsNames[i]);
-    //console.log(itemsNames[i]);
+    console.log(itemsNames[i]);
   }
 }
 
 viewShopping();
+//OfObjects = [];
+// var a = ["car", "bike", "scooter"];
+// a.forEach(function(entry) {
+//     var singleObj = {}
+//     singleObj['type'] = 'vehicle';
+//     singleObj['value'] = entry;
+//     listOfObjects.push(singleObj);
+// });
 
+// console.log(listOfObjects);
 
-//SCROLL
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      document.getElementById("navbar_top").classList.add("fixed-top");
-      // add padding top to show content behind navbar
-      navbar_height = document.querySelector(".navbar").offsetHeight;
-      document.body.style.paddingTop = navbar_height + "px";
-    } else {
-      document.getElementById("navbar_top").classList.remove("fixed-top");
-      // remove padding top from body
-      document.body.style.paddingTop = "0";
-    }
-  });
-});
+// 0: {type: "vehicle", value: "car"}
+// 1: {type: "vehicle", value: "bike"}
+// 2: {type: "vehicle", value: "scooter"}
+// length: 3
+// __proto__: Array(0)
+
+// button.click(function () {
+//     var item = {};
+//     item["name"] = $(this).data("name");
+//     item["price"] = $(this).data("price");
+//     item["cat"] = $(this).data("cat");
+//     listeAchat.push(item);
+//     totalPrice += $(this).data("price");
+//     console.log(listeAchat);
+//     console.log(totalPrice + "$");
+//   });
+
+//test clara
+// button.click(function storeShopping() {
+//   let item = {
+
+//     name: $(this).data("name"),
+//     price: $(this).data("price"),
+//     cat: $(this).data("cat"),
+//   };
+//   localStorage.setItem(`name-${$(this).attr("id")}`, item);
+//   totalPrice += `${$(this).data("price")}`;
+//   console.log(item);
+// });
