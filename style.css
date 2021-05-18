@@ -13,8 +13,13 @@ body {
 h1 {
   font-family: "BioRhyme";
   font-size: 50px;
-  color: #f6a067;
+  color: #8c3333;
 }
+#resultRech {
+  font-size: 4em;
+  font-family: courier;
+}
+
 h2 {
   font-family: "Montserrat";
 }
@@ -69,12 +74,37 @@ a:hover {
   color: #000000;
   background-color: #e9e5e5;
 }
+.choixproduits button:active {
+  transform: translateY(4px);
+  background-color: #e1dede;
+}
 
 /* Pour que le lien "panier" ait la même couleur que les liens de la ul de la nav.*/
 nav form + a {
   color: rgba(0, 0, 0, 0.5);
 }
 
-#cadeau {
-  height: 100px;
+.prodDesc {
+  /* border: 1px solid grey; */
+  border-radius: 10px;
+  height: auto;
+  overflow-y: scroll;
+  background-color: #e9e5e5;
+}
+
+.prodDesc::-webkit-scrollbar {
+  display: none;
+}
+
+.prodDesc p {
+  font-size: 0.8rem;
+  margin: 1rem;
+}
+
+.trash {
+  visibility: hidden;
+}
+
+#recherch {
+  cursor: pointer;
 }
