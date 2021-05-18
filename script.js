@@ -19,7 +19,6 @@ for (let i = 0; i < imagesProduits.length; i++) {
     })
 }
 
-
 // sticky NavBar
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
@@ -35,8 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
 // go to top button
-  var goToTopButton = document.getElementById("goToTop");
+var goToTopButton = document.getElementById("goToTop");
 
 // Quand l'utilisateur scrolle vers le bas.
 window.onscroll = function() {scrollFunction()};
