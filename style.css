@@ -15,11 +15,11 @@ h1 {
   font-size: 50px;
   color: #8c3333;
 }
-#resultRech {
-  font-size: 4em;
-  font-family: courier;
+#resultRecherche {
+  font-size: 1.5em;
+  margin: 2rem;
+  height: 10vh;
 }
-
 h2 {
   font-family: "Montserrat";
 }
@@ -52,13 +52,7 @@ a:hover {
   transition: all 0.2s;
   border-radius: 10px;
 }
-#decouvrir:hover {
-  color: #000000;
-  background-color: #e9e5e5;
-  text-decoration: none;
-}
-
-.choixproduits button {
+button {
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #ffffff;
@@ -70,11 +64,11 @@ a:hover {
   transition: all 0.2s;
   border-radius: 10px;
 }
-.choixproduits button:hover {
+button:hover {
   color: #000000;
   background-color: #e9e5e5;
 }
-.choixproduits button:active {
+button:active {
   transform: translateY(4px);
   background-color: #e1dede;
 }
@@ -87,7 +81,7 @@ nav form + a {
 .prodDesc {
   /* border: 1px solid grey; */
   border-radius: 10px;
-  height: auto;
+  height: 250px;
   overflow-y: scroll;
   background-color: #e9e5e5;
 }
@@ -104,7 +98,88 @@ nav form + a {
 .trash {
   visibility: hidden;
 }
+/* .empty{
+  visibility: hidden;
+} */
 
-#recherch {
+/* Bouton de retour vers le haut */
+@media all and (min-width: 992px) {
+  #goToTop {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 99;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: #555555;
+    color: #e9e5e5;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  #goToTop:hover {
+    background-color: #e9e5e5;
+    color: #555555;
+  }
+}
+
+/* Animation pour la Popup d'accueil */
+@keyframes slideTop {
+  from {
+    top: -50vh;
+  }
+  to {
+    top: 30vh;
+  }
+}
+
+#popUp {
+  position: absolute;
+  z-index: 99; /* Pour qu'elle se place au-dessus du reste */
+  top: 30vh;
+  animation: 1s slideTop;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #e9e5e5;
+  color: #8c3333;
+  font-weight: bold;
+  font-family: "Montserrat";
   cursor: pointer;
+  text-align: center;
+}
+
+.btn-close {
+  text-align: right;
+}
+
+@media all and (max-width: 767.99px) {
+  #popUp p {
+    margin: 1rem;
+  }
+  #popUp {
+    width: 300px;
+    left: calc(50vw - 150px);
+  }
+}
+
+@media all and (min-width: 768px) {
+  #popUp p {
+    margin: 1rem 2rem;
+  }
+
+  #popUp {
+    width: 500px;
+    left: calc(50vw - 250px);
+  }
+}
+
+#displayProducts h2 {
+  background-color: #e9e5e5;
+  padding: 5vh;
+}
+
+#displayProducts h3 {
+  font-size: 1.5em;
 }

@@ -4,7 +4,7 @@ let imagesProduits = document.querySelectorAll('.prodImg');
 // Récupère une liste des descriptions des produits (cachées par défaut).
 let descriptionsProduits = document.querySelectorAll('.prodDesc');
 
-
+// Boucle pour les images de produits qui changent au passage de la souris.
 for (let i = 0; i < imagesProduits.length; i++) {
     // La souris passe sur l'image => elle est cachée, la description s'affiche.
     imagesProduits[i].addEventListener('mouseenter', function () {
@@ -18,6 +18,7 @@ for (let i = 0; i < imagesProduits.length; i++) {
         descriptionsProduits[i].setAttribute("hidden", true);
     })
 }
+
 // sticky NavBar
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
@@ -33,4 +34,69 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  
+
+// go to top button
+var goToTopButton = document.getElementById("goToTop");
+
+// Quand l'utilisateur scrolle vers le bas.
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  // Quand l'utilisateur scrolle vers le bas, dès 50px le bouton apparaît.
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    goToTopButton.style.display = "block";
+    // Sinon, il est invisible.
+  } else {
+    goToTopButton.style.display = "none";
+  }
+}
+
+// Quand l'utilisateur clique sur le bouton, il revient en haut de la page.
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+$(document).ready(function () {
+  var landingPopUp = sessionStorage.getItem('landingPopUp') || '';
+  if (landingPopUp != 'yes') {
+      $('#popUp').removeAttr('hidden');
+      sessionStorage.setItem('landingPopUp','yes');
+  }
+})
+
+// TEST SAPHIR nombre d'article dans le panier
+
+ let carts = document.querySelectorAll('.add');
+ let products = []
+
+ for (let i=0; i < carts.length; i++){
+  carts[i].addEventListener('click', () => {
+    cartNumbers();
+  })
+ }
+
+function onLoadCartNumbers(){
+  let productNumbers = localStorage.getItem('cartNumbers');
+
+  if (productNumbers){
+    document.querySelector('.badge span').textContent = productNumbers; 
+  }
+}
+
+ function cartNumbers(){
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    productNumbers = parseInt(productNumbers);
+    if ( productNumbers ){
+    localStorage.setItem('cartNumbers', productNumbers + 1);
+    document.querySelector('.badge span').textContent = productNumbers + 1; 
+
+  } else {
+    localStorage.setItem('cartNumbers', 1);
+    document.getElementsByClassName('.cart span').textContent = 1; 
+
+  }
+
+ }
+ onLoadCartNumbers();
