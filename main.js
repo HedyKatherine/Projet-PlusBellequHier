@@ -4,18 +4,19 @@ let titles= []
 // la bare de recherche (chercher un produit)
 
 
-
 $('#recherche').click(function(){
   var selectRecherche = $('#rechercheProduit').val();
   var titles = $.map($('[title][title!=""]'), function(el) { return el.title });
   if (titles.indexOf(selectRecherche) != -1){
   
     let item = $(`div[title='${selectRecherche}']`);
-    $('#resultRecherche').html(item);
+    $('#resultat').html(item);
   }
   else{
     $('#resultRecherche').text('Desolé se produit est introuvable');}
 });
+
+
 
 
 //function qui se declenche quand un boutton avec la class .add est cliqué
