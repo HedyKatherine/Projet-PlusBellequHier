@@ -19,7 +19,6 @@ for (let i = 0; i < imagesProduits.length; i++) {
     })
 }
 
-
 // sticky NavBar
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
@@ -35,10 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-// go to top button
-  var goToTopButton = document.getElementById("goToTop");
 
-Quand l'utilisateur scrolle vers le bas.
+// go to top button
+var goToTopButton = document.getElementById("goToTop");
+
+// Quand l'utilisateur scrolle vers le bas.
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -56,3 +56,11 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+$(document).ready(function () {
+  var landingPopUp = sessionStorage.getItem('landingPopUp') || '';
+  if (landingPopUp != 'yes') {
+      $('#popUp').removeAttr('hidden');
+      sessionStorage.setItem('landingPopUp','yes');
+  }
+})

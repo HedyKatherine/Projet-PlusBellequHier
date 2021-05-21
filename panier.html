@@ -45,13 +45,13 @@
           </form>
           <!-- BAR DE RECHERCHE -->
           <a href="panier.html" class="d-block d-lg-none mt-2">Panier</a>
-          <a href="panier.html" class="d-none d-lg-block"><img src="assets/icons/shopping-cart-simple.png" width="50"
+          <a href="panier.html" class="d-none d-lg-block"><img id="shopping" src="" width="50"
               alt="shopping cart" /></a>
         </div>
       </div>
     </nav>
   </header>
-
+  <button onclick="topFunction()" id="goToTop" title="Go to top">Top</button>
   <!-- Mon affichage de recherch -->
   <div id="resultRecherche" class="text-center align-items-center my-0"></div>
   <!-- Mon affichage de recherch -->
@@ -67,6 +67,7 @@
 
     <p id="total" class="text-center border border-black mt-5 rounded col-4 mx-auto"></p>
     <button class="trash">vider panier entier </button>
+    <button><a href="javascript:history.back()">Retour</a></button>
   </div>
   <!-- ------------------------------------------------------SECTION CADEAU--------------------------------------- -->
 

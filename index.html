@@ -45,19 +45,34 @@
           </form>
           <!-- BAR DE RECHERCHE -->
           <a href="panier.html" class="d-block d-lg-none mt-2">Panier</a>
-          <a href="panier.html" class="d-none d-lg-block"><img src="assets/icons/shopping-cart-simple.png" width="50"
+
+          <a href="panier.html" class="d-none d-lg-block"><img id="shopping" src="" width="50"
               alt="shopping cart" /></a>
+
+
         </div>
       </div>
     </nav>
+
+    <div id="popUp" hidden>
+      <p class="btn-close" onclick="this.parentElement.style.display='none';">X</p>
+      <img src="assets/images.jpeg" alt="kim K">
+      <p>Inscrivez-vous à la newsletter&nbsp;!</p>
+      <p>Chaque semaine de nouvelles offres exclusives, rien que pour vous&nbsp;!</p>
+    </div>
   </header>
 
   <!-- Mon affichage de recherch -->
-  <div id="resultRecherche" class="text-center align-items-center"></div>
+  <div class="container justify-content-center">
+    <div class="row justify-content-center">
+      <div id="resultRecherche" class="col-12 col-md-10 text-center align-items-center"></div>
+    </div>
+  </div>
   <!-- Mon affichage de recherch -->
   <!-- ------------------------------------------------------BEST SELLER--------------------------------------- -->
   <section class="bestseller">
-    <div class="container d-flex flex-column flex-md-row my-2 justify-content-center align-items-md-stretch">
+    <div id="resultat"
+      class="container d-flex flex-column flex-md-row my-2 justify-content-center align-items-md-stretch">
       <div class="col-12 col-md-8 col-lg-9 d-flex flex-column justify-content-center text-center p-5">
         <h2>Serum Bakuchiol Alternatif au Rétinol</h2>
         <p class="font-weight-bold">Notre Best Seller</p>
@@ -68,8 +83,8 @@
             Découvrir</a></button>
       </div>
       <img class="col-12 col-md-4 col-lg-4 p-0" src="assets/visage/visage-1.jpeg" alt="produit best seller" />
-
     </div>
+
   </section>
 
   <!-- ------------------------------------------------------SECTION VISAGE--------------------------------------- -->

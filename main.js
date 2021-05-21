@@ -3,7 +3,26 @@ let button = $(".add");
 let titles= []
 // la bare de recherche (chercher un produit)
 
+$( document ).ready(function() {
+  
+  
+  for (i = 0; i < 25; i++) {
+    let itemId = `${"nproduit" + i}`;
+    let number = `${"produit" + i + "Number"}`;
+let storedNumber = localStorage.getItem(`${number}`)
+console.log(storedNumber)
+if (storedNumber == 0 || storedNumber == null ) {
+  $(`#${itemId}`).html("");
 
+}
+else {
+ $(`#${itemId}`).html(`${storedNumber}x `);
+
+
+}
+  }
+
+});
 
 $('#recherche').click(function(){
   var selectRecherche = $('#rechercheProduit').val();
@@ -20,6 +39,7 @@ $('#recherche').click(function(){
 
 //function qui se declenche quand un boutton avec la class .add est cliqué
 button.click(function () {
+  $('#shopping').attr("src", "assets/icons/shopping-full.png");
   //num vaut au dernier nombre de click sur le bouton enregister dans le local storage
   let prevNum = parseFloat(localStorage.getItem(`${$(this).attr("id")}Number`));
   // prevPrice vaut au dernier total du prix associer a ce bouton enregister dans le local storage
@@ -47,16 +67,24 @@ else {
   //on store dans le local storage toutes les donnees recolter (nom du produit ajouter, category, prix, total  du prix du produit, nombre de produit chaque donner est accessible par la clé associer (exemple `${$(this).attr("id")}TotalPrice`) est la cle pour avoir le prix total)
   localStorage.setItem(`${$(this).attr("id")}Name`, $(this).data("name"));
   localStorage.setItem(`${$(this).attr("id")}Price`, $(this).data("price"));
-  //localStorage.setItem(`${$(this).attr("id")}Cat`, $(this).data("cat"));
   localStorage.setItem(`${$(this).attr("id")}Number`, $(this).data("count"));
+  console.log(`${$(this).attr("id")}`)
   localStorage.setItem(
     `${$(this).attr("id")}TotalPrice`,
     $(this).data("totalprice")
   );
    $(`.empty[data-name='${$(this).attr("id")}']`).visible();
 
-   let number = localStorage.getItem(`${$(this).attr("id")}Number`);
-   $('#number').html(`${number}x `)
+   
+   let number = localStorage.getItem(`${$(this).attr("id")}Number`)
+    
+    if (number == 0 ) {
+     $(`#n${$(this).attr("id")}`).html("");
+   }
+   else if (number > 0 ) {
+    $(`#n${$(this).attr("id")}`).html(`${number}x `);
+   }
+
 });
 
 (function($) {
@@ -74,8 +102,6 @@ else {
 
 
 
-
-
  function minusEmpty () {
   let prevNum = parseFloat(localStorage.getItem(`${$(this).data("name")}Number`));
  
@@ -87,24 +113,26 @@ else {
   else {
     localStorage.setItem(`${$(this).data("name")}Number`, 0 );
     $(this).invisible();
+    localStorage.removeItem(`${$(this).data("name")}Name`)
+    location.reload();
   }
 
   let prevPrice = parseFloat(localStorage.getItem(`${$(this).data("name")}TotalPrice`));
   let itemPrice = parseFloat(localStorage.getItem(`${$(this).data("name")}Price`));
   localStorage.setItem(`${$(this).data("name")}TotalPrice`, prevPrice - itemPrice );
-  
+  let test = `n${$(this).data("name")}`
  let number = localStorage.getItem(`${$(this).data("name")}Number`)
+
  if (number == 0 ) {
-  $('#number').html("");
+  $(`#n${$(this).data("name")}`).html("");
 }
 else {
-  $('#number').html(`${number}x `)
+  $(`#n${$(this).data("name")}`).html(`${number}x `)
 }
 }
 
 function minusButton (produit) {
   // let item = produit;
-
   let prevNum = parseFloat(localStorage.getItem(`${produit}Number`));
   let itemPrice = parseFloat(localStorage.getItem(`${produit}Price`));
   if (prevNum > 1){
@@ -122,15 +150,15 @@ function minusButton (produit) {
     // $(`#${produit}`).invisible();
   }
 
+  let test = `n${$(this).data("name")}`
   let number = localStorage.getItem(`${$(this).data("name")}Number`)
 
   if (number == 0 ) {
-    $('#number').html("");
-  }
-  else {
-    $('#number').html(`${number}x `)
-  }
-
+   $(`#n${$(this).data("name")}`).html("");
+ }
+ else {
+   $(`#n${$(this).data("name")}`).html(`${number}x `)
+ }
 }
 
 function plusButton (produit) {
@@ -178,11 +206,11 @@ function viewShopping() {
    let totalPanier 
  
 
-   if (itemTotalPriceValue !== null) {
+   if (itemTotalPriceValue !== null && itemTotalPriceValue !== 0) {
     prices.push(parseFloat(itemTotalPriceValue));
    }
 
-    if (itemNameValue !== null) {
+    if (itemNameValue !== null ) {
       $('#produits').append(
       `<div id="${itemId}" class="container "> 
       <div class="row">
@@ -196,7 +224,7 @@ function viewShopping() {
       <button type="disabled">${itemNumberValue}</button>
       <button onclick="plusButton('${itemId}')" data-price="${itemPriceValue}" data-totalPrice="${itemTotalPriceValue}" data-count="${itemNumberValue}">+</button>
       </div>
-      <p class="border border-black text-center mt-2">${itemTotalPriceValue}$</p>
+      <p class="border border-black text-center mt-2">${itemTotalPriceValue}€</p>
      </div>
      
       <img class="col-4"  src="./assets/items/${'produit'+i+'.jpeg'}">
@@ -221,9 +249,15 @@ function viewShopping() {
 const sum = prices.reduce((accumulator, element) => {
   return accumulator + element;
 }, 0);
- console.log(sum);
 
- $('#total').prepend(`<p class="my-2">total du panier: ${sum}$</p>`)
+if(sum > 0) {
+  $('#shopping').attr("src", "assets/icons/shopping-full.png");
+}
+else {
+  $('#shopping').attr("src", "assets/icons/shopping-empty.png");
+}
+ $('#total').prepend(`<p class="my-2">total du panier: ${sum}€</p>`)
+
 }
 
 
